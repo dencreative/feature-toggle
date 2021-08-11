@@ -1,6 +1,9 @@
 
 # Laravel Feature Toggle
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/charlgottschalk/feature-toggle.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle)
+[![Total Downloads](https://img.shields.io/packagist/dt/charlgottschalk/feature-toggle.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle)
+
 Feature toggling is a coding strategy used along with source control to make it easier to continuously integrate and deploy. 
 The idea of the toggles essentially prevents sections of code from executing if a feature disabled.
 
