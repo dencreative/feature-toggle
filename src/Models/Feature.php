@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Models;
+namespace DenCreative\FeatureToggle\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;

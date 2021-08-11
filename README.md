@@ -1,9 +1,6 @@
 
 # Laravel Feature Toggle
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/charlgottschalk/feature-toggle.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle)
-[![Total Downloads](https://img.shields.io/packagist/dt/charlgottschalk/feature-toggle.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle)
-
 Feature toggling is a coding strategy used along with source control to make it easier to continuously integrate and deploy. 
 The idea of the toggles essentially prevents sections of code from executing if a feature is disabled.
 
@@ -20,15 +17,38 @@ Oh, and it supports user roles, your user roles.
 ---
 
 #### 1. Install the package using composer:
+
+In your `composer.json` add the following to the `repositories`:
 ```
-$ composer require charlgottschalk\feature-toggle
+// composer.json
+{
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/dencreative/feature-toggle"
+		}
+	]
+}
 ```
 
-The package should be auto-discovered by Laravel, but if it's not, simply add the service provider to your `config/app.php` providers array:
+Then add the following to `require`:
+```
+// composer.json
+{
+	"require": {
+        "dencreative/feature-toggle": "v1.0.*"
+    }
+}
+```
+
+Now run `$ composer update`.
+
+Once installed the package should be auto-discovered by Laravel, but if it's not, simply add the service provider to your `config/app.php` providers array:
+
 ```php
 'providers' => [
     //...
-    CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider::class,
+    DenCreative\FeatureToggle\FeatureToggleServiceProvider::class,
 ],
 ```
 
@@ -36,18 +56,18 @@ The package should be auto-discovered by Laravel, but if it's not, simply add th
 
 **Config:**
 ```
-$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="config"
+$ php artisan vendor:publish --provider="DenCreative\FeatureToggle\FeatureToggleServiceProvider" --tag="config"
 ```
 
 **Assets:**
 ```
-$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="assets"
+$ php artisan vendor:publish --provider="DenCreative\FeatureToggle\FeatureToggleServiceProvider" --tag="assets"
 ```
 
 **Views:**
 _This is not necessary unless you'd like to make changes to the GUI_
 ```
-$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="views"
+$ php artisan vendor:publish --provider="DenCreative\FeatureToggle\FeatureToggleServiceProvider" --tag="views"
 ```
 
 #### 3. Migrate
@@ -82,7 +102,7 @@ LFT will attempt to retrieve the user's role via the property and roles configur
 
 LFT provides a facade to easily check feature toggles in controllers etc.
 ```php
-use CharlGottschalk\FeatureToggle\Facades\Feature;
+use DenCreative\FeatureToggle\Facades\Feature;
 
 if (Feature::enabled('feature_name')) {
     // Feature is enabled
@@ -115,8 +135,8 @@ Add the middleware to your `app\Http\Kernel.php` `$routeMiddleware` array.
 ```php
 protected $routeMiddleware = [
         // Other middleware
-        'feature' => \CharlGottschalk\FeatureToggle\Http\Middleware\CheckFeature::class,
-        'feature.role' => \CharlGottschalk\FeatureToggle\Http\Middleware\CheckFeatureRole::class,
+        'feature' => \DenCreative\FeatureToggle\Http\Middleware\CheckFeature::class,
+        'feature.role' => \DenCreative\FeatureToggle\Http\Middleware\CheckFeatureRole::class,
     ];
 ```
 

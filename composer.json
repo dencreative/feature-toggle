@@ -1,5 +1,5 @@
 {
-    "name": "charlgottschalk/feature-toggle",
+    "name": "dencreative/feature-toggle",
     "description": "Provides a simple implementation for creating and managing feature toggles",
     "type": "library",
     "keywords": [
@@ -16,7 +16,7 @@
     "authors": [
         {
             "name": "Charl Gottschalk",
-            "email": "2204385+CharlGottschalk@users.noreply.github.com"
+            "email": "2204385+DenCreative@users.noreply.github.com"
         }
     ],
     "minimum-stability": "dev",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CharlGottschalk\\FeatureToggle\\": "src"
+            "DenCreative\\FeatureToggle\\": "src"
         },
         "files": [
             "helpers/helpers.php"
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CharlGottschalk\\FeatureToggle\\FeatureToggleServiceProvider"
+                "DenCreative\\FeatureToggle\\FeatureToggleServiceProvider"
             ]
         }
     }

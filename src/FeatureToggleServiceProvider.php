@@ -1,17 +1,17 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle;
+namespace DenCreative\FeatureToggle;
 
-use CharlGottschalk\FeatureToggle\Console\AddFeature;
-use CharlGottschalk\FeatureToggle\Console\AddRoleToFeature;
-use CharlGottschalk\FeatureToggle\Console\DisableFeature;
-use CharlGottschalk\FeatureToggle\Console\EnableFeature;
-use CharlGottschalk\FeatureToggle\Console\RemoveFeature;
-use CharlGottschalk\FeatureToggle\Console\RemoveRoleFromFeature;
-use CharlGottschalk\FeatureToggle\Console\ToggleFeature;
-use CharlGottschalk\FeatureToggle\Http\Middleware\CheckUserRole;
-use CharlGottschalk\FeatureToggle\View\Components\Alert;
-use CharlGottschalk\FeatureToggle\View\Components\Button;
+use DenCreative\FeatureToggle\Console\AddFeature;
+use DenCreative\FeatureToggle\Console\AddRoleToFeature;
+use DenCreative\FeatureToggle\Console\DisableFeature;
+use DenCreative\FeatureToggle\Console\EnableFeature;
+use DenCreative\FeatureToggle\Console\RemoveFeature;
+use DenCreative\FeatureToggle\Console\RemoveRoleFromFeature;
+use DenCreative\FeatureToggle\Console\ToggleFeature;
+use DenCreative\FeatureToggle\Http\Middleware\CheckUserRole;
+use DenCreative\FeatureToggle\View\Components\Alert;
+use DenCreative\FeatureToggle\View\Components\Button;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;

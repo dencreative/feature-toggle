@@ -1,9 +1,9 @@
 <?php
 
-namespace CharlGottschalk\Featuretoggle\Console;
+namespace DenCreative\Featuretoggle\Console;
 
-use CharlGottschalk\FeatureToggle\Models\Feature;
-use CharlGottschalk\FeatureToggle\Models\FeatureRole;
+use DenCreative\FeatureToggle\Models\Feature;
+use DenCreative\FeatureToggle\Models\FeatureRole;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 

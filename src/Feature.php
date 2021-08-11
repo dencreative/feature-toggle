@@ -1,9 +1,9 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle;
+namespace DenCreative\FeatureToggle;
 
-use CharlGottschalk\FeatureToggle\Models\Feature as FeatureModel;
-use CharlGottschalk\FeatureToggle\Models\FeatureRole;
+use DenCreative\FeatureToggle\Models\Feature as FeatureModel;
+use DenCreative\FeatureToggle\Models\FeatureRole;
 use Illuminate\Support\Str;
 
 class Feature

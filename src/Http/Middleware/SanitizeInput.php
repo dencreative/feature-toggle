@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Http\Middleware;
+namespace DenCreative\FeatureToggle\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Str;

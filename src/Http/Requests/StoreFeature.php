@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Http\Requests;
+namespace DenCreative\FeatureToggle\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
@@ -25,7 +25,7 @@ class StoreFeature extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:CharlGottschalk\FeatureToggle\Models\Feature'
+            'name' => 'required|unique:DenCreative\FeatureToggle\Models\Feature'
         ];
     }
 

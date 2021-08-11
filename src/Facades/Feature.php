@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Facades;
+namespace DenCreative\FeatureToggle\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

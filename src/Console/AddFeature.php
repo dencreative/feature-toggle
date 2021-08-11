@@ -1,8 +1,8 @@
 <?php
 
-namespace CharlGottschalk\Featuretoggle\Console;
+namespace DenCreative\Featuretoggle\Console;
 
-use CharlGottschalk\FeatureToggle\Models\Feature;
+use DenCreative\FeatureToggle\Models\Feature;
 use Illuminate\Console\Command;
 
 class AddFeature extends Command

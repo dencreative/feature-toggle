@@ -1,6 +1,6 @@
 <?php
 
-use CharlGottschalk\FeatureToggle\Facades\Feature;
+use DenCreative\FeatureToggle\Facades\Feature;
 
 if (! function_exists('feature_enabled')) {
     function feature_enabled($feature, $default = true) {

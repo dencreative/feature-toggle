@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\View\Components;
+namespace DenCreative\FeatureToggle\View\Components;
 
 use Illuminate\View\Component;
 

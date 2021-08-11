@@ -1,9 +1,9 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Http\Middleware;
+namespace DenCreative\FeatureToggle\Http\Middleware;
 
 use Closure;
-use CharlGottschalk\FeatureToggle\Facades\Feature;
+use DenCreative\FeatureToggle\Facades\Feature;
 
 class CheckUserRole
 {

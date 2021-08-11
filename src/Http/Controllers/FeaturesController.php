@@ -1,8 +1,8 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Http\Controllers;
+namespace DenCreative\FeatureToggle\Http\Controllers;
 
-use CharlGottschalk\FeatureToggle\Models\Feature;
+use DenCreative\FeatureToggle\Models\Feature;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -45,7 +45,7 @@ class FeaturesController extends BaseController
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|unique:CharlGottschalk\FeatureToggle\Models\Feature'
+            'name' => 'required|unique:DenCreative\FeatureToggle\Models\Feature'
         ]);
 
         if ($validator->fails()) {

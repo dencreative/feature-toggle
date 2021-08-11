@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlGottschalk\FeatureToggle\Http\Controllers;
+namespace DenCreative\FeatureToggle\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 
