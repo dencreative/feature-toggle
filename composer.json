@@ -12,6 +12,7 @@
         "toggle",
         "toggles"
     ],
+	"version": "v1.0.0",
     "authors": [
         {
             "name": "Charl Gottschalk",
