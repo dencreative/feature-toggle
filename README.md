@@ -1,5 +1,5 @@
 
-#Laravel Feature Toggle
+# Laravel Feature Toggle
 
 Feature toggling is a coding strategy used along with source control to make it easier to continuously integrate and deploy. 
 The idea of the toggles essentially prevents sections of code from executing if a feature disabled.
@@ -14,11 +14,11 @@ Oh, and it supports user roles, your user roles.
 
 It even has a simple GUI for managing features.
 
-##Installation
+## Installation
 
 ---
 
-####1. Install the package using composer:
+#### 1. Install the package using composer:
 ```
 $ composer require charlgottschalk\feature-toggle
 ```
@@ -31,7 +31,7 @@ The package should be auto-discovered by Laravel, but if it's not, simply add th
 ],
 ```
 
-####2. Publish the assets:
+#### 2. Publish the assets:
 
 **Config:**
 ```
@@ -49,16 +49,18 @@ _This is not necessary unless you'd like to make changes to the GUI_
 $ php artisan vendor:publish --provider="JohnDoe\BlogPackage\BlogPackageServiceProvider" --tag="views"
 ```
 
-####3. Migrate
+#### 3. Migrate
 Run `$ php artisan migrate` to create the feature toggle tables.
 
-##Usage
+## Usage
 
 ---
 
 LFT provides a few easy to use blade directives, helper functions and middleware to determine if features are enabled.
 
-####Blade
+In addition, there is a GUI to manage your features, accessible at `http://domain.local/features` - See [prefix](#prefix) 
+
+#### Blade
 
 To check if a feature is enabled - no roles checked
 ```angular2html
@@ -75,7 +77,7 @@ To check if a feature is enabled, including if the authenticated user has permis
 ```
 LFT will attempt to retrieve the user's role via the property and roles configuration (see config) when determining if a user has permission to access a feature.
 
-####Facade
+#### Facade
 
 LFT provides a facade to easily check feature toggles in controllers etc.
 ```php
@@ -90,7 +92,7 @@ if (Feature::enabledFor('feature_name')) {
 }
 ```
 
-####Helpers
+#### Helpers
 
 LFT provides helper functions for checking feature toggles.
 ```php
@@ -103,7 +105,7 @@ if (enabled_for('feature_name')) {
 }
 ```
 
-####Middleware
+#### Middleware
 
 LFT provides middleware for disabling routes if a feature is disabled or the user does not have permission.
 
@@ -125,38 +127,38 @@ Route::get('/another-url', [App\Http\Controllers\AnotherRoleController::class, '
 
 The middleware will `abort(404)` if the given feature is disabled or the user does not have permission.
 
-##Config
+## Config
 
 ---
 
-###`'on' => true`:
+### `'on' => true`:
 Switch LFT off (`false`) or on (`true`) - When switched off, LFT will not retrieve feature status from the database.
 
-###`'all_on' => true`: 
+### `'all_on' => true`: 
 If LFT is switched off, this determines if the checks return 'enabled' (`'all_on' => true`) or 'disabled' (`'all_on' => false`) for all features.
 
-###`'connection' => env('DB_CONNECTION', 'mysql')`:
+### `'connection' => env('DB_CONNECTION', 'mysql')`:
 Specify the database connection to use for LFT migrations and models - Useful, if you prefer your feature toggles to exist outside your application database.
 
-###`'roles.property' => 'role'`:
+### `'roles.property' => 'role'`:
 LFT uses this to determine which property to use on the user model to retrieve the user's role.
 
-###`'roles.model' => \App\Models\Role::class`:
+### `'roles.model' => \App\Models\Role::class`:
 Specify which model represents roles in your application.
 
-###`'roles.column' => 'name'`:
+### `'roles.column' => 'name'`:
 Specify which column on the role model/table represents the name of a role.
 
-###`'auth.role' => 'developer'`:
+### `'auth.role' => 'developer'`:
 Specify which role a user should have to access the feature toggle GUI.
 
-###`'route.middleware' => ['auth']`:
+### `'route.middleware' => ['auth']`:
 Specify which middleware should be used for feature toggle GUI routes.
 
-###`'route.prefix' => 'features'`:
+### <a name="prefix"></a>`'route.prefix' => 'features'`:
 Specify the prefix to use for feature toggle GUI routes - In this case, the GUI will be accessible at `http://domain.local/features`.
 
-##ToDo:
+## ToDo:
 
 ---
 
@@ -165,7 +167,7 @@ Specify the prefix to use for feature toggle GUI routes - In this case, the GUI 
 - [ ] API Support
 - [ ] Lumen Support
 
-##License
+## License
 
 ---
 
