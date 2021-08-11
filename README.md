@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/charlgottschalk/feature-toggle.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle)
 
 Feature toggling is a coding strategy used along with source control to make it easier to continuously integrate and deploy. 
-The idea of the toggles essentially prevents sections of code from executing if a feature disabled.
+The idea of the toggles essentially prevents sections of code from executing if a feature is disabled.
 
 ---
 
@@ -14,8 +14,6 @@ _* This is a work in progress, but is stable and working_
 LFT provides a simple package for implementing feature toggles allowing you to switch features on and off using a simple GUI or with Artisan commands.
 
 Oh, and it supports user roles, your user roles.
-
-It even has a simple GUI for managing features.
 
 ## Installation
 
@@ -38,18 +36,18 @@ The package should be auto-discovered by Laravel, but if it's not, simply add th
 
 **Config:**
 ```
-$ php artisan vendor:publish --provider="JohnDoe\BlogPackage\BlogPackageServiceProvider" --tag="config"
+$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="config"
 ```
 
 **Assets:**
 ```
-$ php artisan vendor:publish --provider="JohnDoe\BlogPackage\BlogPackageServiceProvider" --tag="assets"
+$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="assets"
 ```
 
 **Views:**
 _This is not necessary unless you'd like to make changes to the GUI_
 ```
-$ php artisan vendor:publish --provider="JohnDoe\BlogPackage\BlogPackageServiceProvider" --tag="views"
+$ php artisan vendor:publish --provider="CharlGottschalk\FeatureToggle\FeatureToggleServiceProvider" --tag="views"
 ```
 
 #### 3. Migrate
