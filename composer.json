@@ -13,6 +13,7 @@
         "toggles"
     ],
 	"version": "v1.0.0",
+	"license": "MIT",
     "authors": [
         {
             "name": "Charl Gottschalk",
