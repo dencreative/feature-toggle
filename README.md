@@ -96,7 +96,7 @@ To check if a feature is enabled, including if the authenticated user has permis
     <p>This feature is enabled</p>
 @endenabledFor
 ```
-LFT will attempt to retrieve the user's role via the property and roles configuration (see config) when determining if a user has permission to access a feature.
+LFT will attempt to retrieve the user's role via the property and roles configuration (see [property](#role_prop)) when determining if a user has permission to access a feature.
 
 #### Facade
 
@@ -161,7 +161,7 @@ If LFT is switched off, this determines if the checks return 'enabled' (`'all_on
 #### `'connection' => env('DB_CONNECTION', 'mysql')`:
 Specify the database connection to use for LFT migrations and models - Useful, if you prefer your feature toggles to exist outside your application database.
 
-#### `'roles.property' => 'role'`:
+#### <a name="role_prop"></a>`'roles.property' => 'role'`:
 LFT uses this to determine which property to use on the user model to retrieve the user's role.
 
 #### `'roles.model' => \App\Models\Role::class`:
